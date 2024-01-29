@@ -3,7 +3,7 @@
 <p *ngIf="hobbyDeleted">Hobby deleted!</p>
 <p [ngClass]="{'red-list': hobbies.length > 3}">Hobbies: {{this.hobbies.length}}</p>
 <ul>
-  <app-hobby-element *ngFor="let hby of hobbies" [hobbyName]="hby"
+  <app-hobby-element *ngFor="let hby of hobbies;let i = index" [hobbyName]="hby" [isEvenHobby]="i % 2 == 0"
                      (hobbyRemoved)="onHobbyRemoved($event)"></app-hobby-element>
 </ul>
 
