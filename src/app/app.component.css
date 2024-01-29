@@ -1,4 +1,4 @@
-.red-list{
-  color: red;
-  border: 1px solid red;
+.navigation {
+  display: flex;
+  gap: 10px;
 }

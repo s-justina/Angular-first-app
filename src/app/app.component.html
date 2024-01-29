@@ -1,11 +1,7 @@
-<input type="text" [(ngModel)]="newHobby">
-<button (click)="addNewHobby()">Add new hobby</button>
-<p *ngIf="hobbyDeleted">Hobby deleted!</p>
-<p [ngClass]="{'red-list': hobbies.length > 3}">Hobbies: {{this.hobbies.length}}</p>
-<ul>
-  <app-hobby-element *ngFor="let hby of hobbies;let i = index" [hobbyName]="hby" [isEvenHobby]="i % 2 == 0"
-                     (hobbyRemoved)="onHobbyRemoved($event)"></app-hobby-element>
-</ul>
-
+<div ngClass="navigation">
+  <a routerLink="/">Home</a>
+  <a routerLink="/blog">Blog</a>
+  <a routerLink="/account">Account</a>
+</div>
 
 <router-outlet/>
